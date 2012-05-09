@@ -1,0 +1,14 @@
+# shairplay pkg-config file
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: shairplay
+Description: shairplay is a server library which implements an airtunes server bonjour server.
+Version: @VERSION@
+Requires:
+Conflicts:
+Libs: -L${libdir} -lshairplay
+Cflags: -I${includedir}
