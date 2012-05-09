@@ -159,7 +159,7 @@ raop_buffer_init(const char *fmtp,
 	assert(aeskey);
 	assert(aesiv);
 
-	raop_buffer = calloc(1, sizeof(raop_buffer_t));
+	raop_buffer = (raop_buffer_t *)calloc(1, sizeof(raop_buffer_t));
 	if (!raop_buffer) {
 		return NULL;
 	}
@@ -186,7 +186,7 @@ raop_buffer_init(const char *fmtp,
 		raop_buffer_entry_t *entry = &raop_buffer->entries[i];
 		entry->audio_buffer_size = audio_buffer_size;
 		entry->audio_buffer_len = 0;
-		entry->audio_buffer = raop_buffer->buffer+i*audio_buffer_size;
+		entry->audio_buffer = (char *)raop_buffer->buffer+i*audio_buffer_size;
 	}
 
 	/* Initialize ALAC decoder */

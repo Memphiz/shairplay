@@ -44,7 +44,7 @@ extern "C" {
 #include <stdio.h>
 
 #if defined(WIN32)
-#define STDCALL                 __stdcall
+//#define STDCALL                 __stdcall //else MD5_Init and others are exported via stdcall and arn't found in digit.c when using cdecl (which is needed for ctypes)
 #define EXP_FUNC                __declspec(dllexport)
 #else
 #define STDCALL

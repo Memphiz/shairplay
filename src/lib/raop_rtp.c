@@ -200,7 +200,7 @@ sockets_cleanup:
 static int
 raop_rtp_resend_callback(void *opaque, unsigned short seqnum, unsigned short count)
 {
-	raop_rtp_t *raop_rtp = opaque;
+	raop_rtp_t *raop_rtp = (raop_rtp_t *)opaque;
 	unsigned char packet[8];
 	unsigned short ourseqnum;
 	struct sockaddr *addr;
@@ -234,7 +234,7 @@ raop_rtp_resend_callback(void *opaque, unsigned short seqnum, unsigned short cou
 static THREAD_RETVAL
 raop_rtp_thread_udp(void *arg)
 {
-	raop_rtp_t *raop_rtp = arg;
+	raop_rtp_t *raop_rtp = (raop_rtp_t *)arg;
 	unsigned char packet[RAOP_PACKET_LEN];
 	unsigned int packetlen;
 	struct sockaddr_storage saddr;

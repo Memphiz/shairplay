@@ -28,6 +28,7 @@
 #include "utils.h"
 #include "netutils.h"
 #include "logger.h"
+#include "compat.h"//for getting snprintf right in windows
 
 /* Actually 345 bytes for 2048-bit key */
 #define MAX_SIGNATURE_LEN 512
@@ -76,7 +77,7 @@ conn_init(void *opaque, unsigned char *local, int locallen, unsigned char *remot
 {
 	raop_conn_t *conn;
 
-	conn = calloc(1, sizeof(raop_conn_t));
+	conn = (raop_conn_t *)calloc(1, sizeof(raop_conn_t));
 	if (!conn) {
 		return NULL;
 	}
@@ -122,7 +123,7 @@ conn_init(void *opaque, unsigned char *local, int locallen, unsigned char *remot
 static void
 conn_request(void *ptr, http_request_t *request, http_response_t **response)
 {
-	raop_conn_t *conn = ptr;
+	raop_conn_t *conn = (raop_conn_t *)ptr;
 	raop_t *raop = conn->raop;
 
 	http_response_t *res;
@@ -152,7 +153,7 @@ conn_request(void *ptr, http_request_t *request, http_response_t **response)
 
 			/* Allocate the authenticate string */
 			authstrlen = sizeof("Digest realm=\"AppleTV\", nonce=\"\"") + sizeof(conn->nonce) + 1;
-			authstr = malloc(authstrlen);
+			authstr = (char *)malloc(authstrlen);
 
 			/* Concatenate the authenticate string */
 			memset(authstr, 0, authstrlen);
@@ -284,7 +285,7 @@ conn_request(void *ptr, http_request_t *request, http_response_t **response)
 		char *datastr;
 
 		data = http_request_get_data(request, &datalen);
-		datastr = calloc(1, datalen+1);
+		datastr = (char *)calloc(1, datalen+1);
 		if (data && datastr && conn->raop_rtp) {
 			memcpy(datastr, data, datalen);
 			if (!strncmp(datastr, "volume: ", 8)) {
