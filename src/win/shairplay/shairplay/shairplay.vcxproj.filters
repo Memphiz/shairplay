@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien\include">
+      <UniqueIdentifier>{5bad96e7-69cf-45d0-8d32-8533a94ecc9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\crypto">
+      <UniqueIdentifier>{1d368dbf-ed57-49b6-b71c-5ac374f2774c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\alac">
+      <UniqueIdentifier>{d0d49821-7232-4e11-8804-510b51ec0e62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\crypto">
+      <UniqueIdentifier>{787e575e-ac99-4319-8698-e0efc11ef463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\alac">
+      <UniqueIdentifier>{d71b57a0-254d-419f-b0f5-cd669d4faef9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\lib\utils.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\base64.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\compat.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\digest.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\dnssdint.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\global.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\http_parser.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\http_request.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\http_response.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\httpd.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\logger.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\memalign.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\netutils.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\raop_buffer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\raop_rtp.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\rsakey.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\rsapem.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\sdp.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\sockets.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\threads.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\raop.h">
+      <Filter>Headerdateien\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\dnssd.h">
+      <Filter>Headerdateien\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\crypto\os_port.h">
+      <Filter>Headerdateien\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\crypto\bigint.h">
+      <Filter>Headerdateien\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\crypto\bigint_impl.h">
+      <Filter>Headerdateien\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\crypto\config.h">
+      <Filter>Headerdateien\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\crypto\crypto.h">
+      <Filter>Headerdateien\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\alac\alac.h">
+      <Filter>Headerdateien\alac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\alac\stdint_win.h">
+      <Filter>Headerdateien\alac</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\lib\utils.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\base64.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\digest.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\http_parser.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\http_request.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\http_response.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\httpd.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\logger.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\netutils.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\raop.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\raop_buffer.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\raop_rtp.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\rsakey.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\rsapem.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\sdp.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\crypto\sha1.c">
+      <Filter>Quelldateien\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\crypto\aes.c">
+      <Filter>Quelldateien\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\crypto\bigint.c">
+      <Filter>Quelldateien\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\crypto\hmac.c">
+      <Filter>Quelldateien\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\crypto\md5.c">
+      <Filter>Quelldateien\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\crypto\rc4.c">
+      <Filter>Quelldateien\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\alac\alac.c">
+      <Filter>Quelldateien\alac</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\dnssd.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
